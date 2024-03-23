@@ -7,8 +7,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 500px;
-    min-width: 500px;
+    min-height: 40%;
+    min-width: 40%;
     flex-flow: column;
 }
 
@@ -57,7 +57,7 @@
 header{
     background-color: #333;
     color:whitesmoke;
-    min-width:100%;
+    min-width: 1rem;
     min-height: 55px;
     display: flex;
     justify-content: center;
