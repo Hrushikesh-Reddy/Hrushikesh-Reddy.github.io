@@ -2,21 +2,22 @@
     padding: 0;
     margin: 0;
 }
-body{
-    
-    min-height: 500px;
-    min-width: 500px;
-}
 
-#outer{
+.bouter{
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 500px;
+    min-width: 500px;
     flex-flow: column;
+}
+
+#outer{
     border : 5px solid black;
     border-radius: 1rem;
     min-width: 16vw;
     min-height:50%;
+    display: grid;
     background-color: lightgray;
     margin: 0.5rem;
 }
@@ -41,11 +42,11 @@ body{
 }
 
 #reset{
-    margin:0.1rem;
+    margin:1rem;
     padding:0.5rem;
-    border: 2px solid black;
+    border: 2px dashed black;
     border-radius: 0.5rem;
-    background-color: #4d4d4d;
+    background-color: #333;
     color: aliceblue;
     font-weight: bold;
     min-width:100px;    
@@ -53,7 +54,7 @@ body{
     font-size: 1rem;
 }
 
-.header{
+header{
     background-color: #333;
     color:whitesmoke;
     min-width:100%;
