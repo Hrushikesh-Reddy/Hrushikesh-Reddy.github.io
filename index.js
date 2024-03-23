@@ -32,21 +32,21 @@ function tictactoe(combs){
     let x = 0, o = 0, calcx = [], calco = [];
     for(let i = 0 ; i < 3; i++){
         for(let j = 0; j < 3; j++){
-            if(combs[i][j] === "X"){
+            if(combs[i][j] == "X"){
                 x++;
                 calcx.push(String([i, j]));
             }
-            else if(combs[i][j] === "O"){
+            else if(combs[i][j] == "O"){
                 o++;
                 calco.push(String([i, j]));
             }
         }
-        if(x === 3){
+        if(x == 3){
             changecolor(calcx);
             return ;
         }
-        else if(o === 3){
-            changecolor(calcx);
+        else if(o == 3){
+            changecolor(calco);
             return ;
         }else{
             x = 0, o = 0, calco = [], calcx = [];
@@ -54,11 +54,11 @@ function tictactoe(combs){
     }
     for(let i = 0 ; i < 3; i++){
         for(let j = 0; j < 3; j++){
-            if(combs[j][i] === "X"){
+            if(combs[j][i] == "X"){
                 x++;
                 calcx.push(String([j, i]));
             }
-            else if(combs[j][i] === "O"){
+            else if(combs[j][i] == "O"){
                 o++;
                 calco.push(String([j, i]));
             }
@@ -68,7 +68,7 @@ function tictactoe(combs){
             return ;
         }
         else if(o === 3){
-            changecolor(calcx);
+            changecolor(calco);
             return ;
         }else{
             x = 0, o = 0, calco = [], calcx = [];
@@ -88,7 +88,7 @@ function tictactoe(combs){
         changecolor(calcx);
         return ;
     }else if(o === 3){
-        changecolor(calcx);
+        changecolor(calco);
         return ;
     }else{
         x = 0, o = 0, calco = [], calcx = [];
