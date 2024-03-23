@@ -17,7 +17,7 @@ function incr(i){
         chance = 0;ctr++;
         elm.innerHTML = "O";
     }
-    if(ctr > 4){tictactoe(combs);}
+    if(ctr >= 4){tictactoe(combs);}
 }
 
 function changecolor(calc){
