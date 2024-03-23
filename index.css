@@ -3,21 +3,20 @@
     margin: 0;
 }
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     min-height: 500px;
     min-width: 500px;
-    flex-flow: column;
-    
 }
 
 #outer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
     border : 5px solid black;
     border-radius: 1rem;
     min-width: 16vw;
     min-height:50%;
-    display: grid;
     background-color: lightgray;
     margin: 0.5rem;
 }
