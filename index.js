@@ -33,11 +33,11 @@ function tictactoe(combs){
     for(let i = 0 ; i < 3; i++){
         for(let j = 0; j < 3; j++){
             if(combs[i][j] == "X"){
-                x++;
+                ++x;
                 calcx.push(String([i, j]));
             }
             else if(combs[i][j] == "O"){
-                o++;
+                ++o;
                 calco.push(String([i, j]));
             }
         }
@@ -55,11 +55,11 @@ function tictactoe(combs){
     for(let i = 0 ; i < 3; i++){
         for(let j = 0; j < 3; j++){
             if(combs[j][i] == "X"){
-                x++;
+                ++x;
                 calcx.push(String([j, i]));
             }
             else if(combs[j][i] == "O"){
-                o++;
+                ++o;
                 calco.push(String([j, i]));
             }
         }
@@ -84,10 +84,10 @@ function tictactoe(combs){
             calco.push(String([i,i]));
         }
     }
-    if(x === 3){
+    if(x == 3){
         changecolor(calcx);
         return ;
-    }else if(o === 3){
+    }else if(o == 3){
         changecolor(calco);
         return ;
     }else{
