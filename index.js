@@ -5,7 +5,7 @@ let combs = [new Array(3), new Array(3), new Array(3)];
 const arr = new Array(10), conv = {
     1:[0, 0], 2:[0, 1], 3:[0, 2], 4:[1, 0], 5:[1, 1], 6:[1, 2], 7:[2, 0], 8:[2, 1], 9:[2, 2]
 };
-let ctr = 0;
+let ctr = 0, win = 0;
 function incr(i){
     let elm = arr[i];
     if(chance % 2 == 0 && elm.innerHTML === ""){
@@ -26,6 +26,7 @@ function changecolor(calc){
             console.log(i, String(conv[i]))
             arr[i].style.backgroundColor = "#90ee90";}
     }
+    win = 1;
 }
 
 function tictactoe(combs){
@@ -120,7 +121,7 @@ function tictactoe(combs){
 
 for(let i = 1 ; i < 10; i++){
     arr[i] = document.getElementById(String((i)));
-    arr[i].addEventListener("click", function(){incr(i)});
+    arr[i].addEventListener("click", function(){ if(!win){incr(i);}});
 }
 
 document.getElementById("reset").addEventListener("click", function(){
@@ -129,5 +130,5 @@ document.getElementById("reset").addEventListener("click", function(){
         arr[i].style.backgroundColor = "lightyellow";
     }
     combs = [new Array(3), new Array(3), new Array(3)];
-    chance = 0;
+    chance = 0;win = 0;
 });
